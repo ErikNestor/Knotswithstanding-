@@ -1,0 +1,902 @@
+html{height: 100%;}
+
+
+body {
+	background: url('../img/csbg2.png');
+	background-size: 100% 100%;
+	height: 700px;
+	overflow: auto;
+}
+
+#buttonTray{
+	position: absolute;
+	top: 10px;
+	left: 1145px;
+	height: 185px;
+	width: 95px;
+}
+
+#saveBut{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/saveBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+#loadBut{
+	position: absolute;
+	top: 5px;
+	left: 50px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/loadBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+
+#eraseBut{
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/delBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+#clearBut{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/clearBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+
+#rotateBut{
+	position: absolute;
+	top: 95px;
+	left: 5px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/rotateBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+
+#shiftBut{
+	position: absolute;
+	top: 95px;
+	left: 50px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/arrowsBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+#invBut{
+	position: absolute;
+	top: 140px;
+	left: 5px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/invBut.png) no-repeat;
+	background-size: 100% 100%;
+    cursor: pointer;
+    border: none;
+}
+
+
+#colorBut{
+	position: absolute;
+	top: 140px;
+	left: 50px;
+	height: 40px;
+	width: 40px;
+	background: url(../img/colorBut.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	cursor: pointer;
+}
+
+.cbSelected{
+	background-image: url('../img/colorButActive2.png') !important;
+	background-size: 100% 100%;
+}
+
+
+.iconBut:hover{
+    outline-style: solid;
+	outline-color: orange;
+    outline-width: 1px;
+	box-shadow: 3px 3px 5px orange;
+}
+
+#fileOpen{
+	position: fixed;
+	top: 250px;
+	left: 50%;
+    margin-left: -100px;	
+	height: 30px;
+	width: 80px;
+	z-index: -5;
+}
+
+
+
+/*-------------------------------------------------------------------------------------*/
+
+
+#sequencingPanel {
+	position: absolute;
+	background: url('../img/wood1.png');
+	top: 575px;
+	left: 170px;
+	height: 180px;
+	width: 1160px;
+	border-radius: 10px;
+	border: solid black 3px;
+	z-index: 80;
+}
+
+#bankButtons{
+	position: absolute;
+	top: 5px;
+	left: 850px;
+	height: 100px;
+	width: 320px;
+}
+
+#frameButtons {
+	position: absolute;
+	top: 65px;
+	left: 400px;
+	height: 100px;
+	width: 770px;
+}
+
+#frameButtons p {
+	font: bold 12px arial, sans-serif;
+	text-align: center;
+	height: 12px;
+	width: 25px;
+}
+
+#bankButtons p {
+	font: bold 12px arial, sans-serif;
+	text-align: center;
+	height: 12px;
+	width: 25px;
+}
+
+#playPauseButs {
+	position: absolute;
+	background: none;
+	top: 5px;
+	left: 10px;
+	height: 75px;
+	width: 370px;
+}
+
+#bankLbl {
+	position: absolute;
+	font: bold 15px arial, sans-serif;
+	top: 15px;
+	left: 790px;
+	height: 15px;
+	width: 100px;
+}
+
+#frBox {
+	position: absolute;
+	top: 95px;
+	left: 45px;
+	height: 50px;
+	width: 290px;
+	border: 3px solid black;
+	border-radius: 10px;
+	background: tan;
+}
+
+#txtLbl {
+	position: absolute;
+	font: bold 15px arial, sans-serif;
+	top: 0px;
+	left: 10px;
+	height: 15px;
+	width: 100px;
+}
+
+#slider {
+	position: absolute;
+	top: 13px;
+	left: 100px;
+	cursor: pointer;
+}
+
+#localBoxLbl {
+	position: absolute;
+	font: bold 15px arial, sans-serif;
+	top: 29px;
+	left: 410px;
+}
+
+#localBox {
+  -ms-transform: scale(1.4); /* IE */
+  -moz-transform: scale(1.4); /* FF */
+  -webkit-transform: scale(1.4); /* Safari and Chrome */
+  -o-transform: scale(1.4); /* Opera */
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+#compBut {
+	position: absolute;
+	border: 2px solid black;
+	border-radius: 8px;
+	box-shadow: 1px 2px 2px brown;
+	top: 25px;
+	left: 600px;
+	height: 25px;
+	width: 170px;
+}
+
+#compLabel {
+	position: absolute;
+	background: tan;
+	top: 0px;
+	left: 0px;
+	height: 25px;
+	width: 135px;
+	border-radius: 7px 0px 0px 7px;
+}
+
+#dCompare {
+	position: absolute;
+	background: red;
+	top: 0px;
+	left: 135px;
+	height: 25px;
+	width: 33px;
+	border-left: 2px solid black;
+	border-radius: 0px 6px 6px 0px;
+	cursor: pointer;
+}
+
+#dCompare:hover {
+	background: orange !important;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+.seqContButs {
+	position: absolute;
+	background: brown;
+	border: 3px solid brown;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+#stopBut{
+	top: 2px;
+	left: 140px;
+	height: 30px;
+	width: 90px;
+	background: url('../img/stopB.png') no-repeat;
+}
+
+#playBut{
+	top: 2px;
+	left: 235px;
+	height: 30px;
+	width: 130px;
+	margin: auto;
+	background: url('../img/playB.png') no-repeat;
+}
+
+.playActive{
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px brown;
+	background-image: url('../img/playActive.png') !important;
+	background-size: 100% 100%;
+}
+
+#rvsPlayBut{
+	top: 2px;
+	left: 5px;
+	height: 30px;
+	width: 130px;
+	background: url('../img/revPlayB.png') no-repeat;
+}
+
+.revPlayActive{
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px brown;
+	background-image: url('../img/revPlayActive.png') !important;
+	background-size: 100% 100%;
+}
+
+
+#prevBut{
+	top: 38px;
+	left: 5px;
+	height: 30px;
+	width: 177px;
+	margin: auto;
+	background: url('../img/prevB.png') no-repeat;
+}
+
+#nextBut{
+	top: 38px;
+	left: 187px;
+	height: 30px;
+	width: 177px;
+	margin: auto;
+	background: url('../img/nextB.png') no-repeat;
+}
+
+.pHover {
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px brown;
+}
+
+
+
+/*-------------------------------------------------------------------------------------*/
+
+.boxStyle{
+	background: tan;
+	color: brown;
+	border: 3px solid black;
+	border-radius : 7px;
+	z-index: 100;
+}
+
+.msgBox {
+	position: fixed;
+	background: tan;
+	color: brown;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 30px;
+	border: 4px solid black;
+	border-radius : 10px;
+	text-align: center;
+	/*vertical-align: middle;*/
+	font: bold 18px arial, sans-serif;
+    margin-top: -15px;
+    margin-left: -150px;
+}
+
+#modalMsg {
+	position: fixed;
+	visibility: hidden;
+	/*text-align: center;*/
+	font: bold 18px arial, sans-serif;
+    top: 200px;
+    left: 50%;
+    /*margin-top: -15px;*/
+    margin-left: -100px;
+	box-shadow: 1px 1px 2px black;
+    width: 200px;
+    height: 100px;
+	z-index: 150;
+}
+
+#mmtext {
+	text-align: center;
+	margin: 10px;
+    top: 0px;
+    left: 50%;
+}
+
+#modalMsg2 {
+	position: fixed;
+	visibility: hidden;
+	text-align: center;
+	font: bold 18px arial, sans-serif;
+    top: 200px;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -100px;
+	box-shadow: 1px 1px 2px black;
+    width: 300px;
+    height: 150px;
+	z-index: 150;
+}
+
+#modalMsg3 {
+	position: fixed;
+	visibility: hidden;
+	text-align: center;
+	font: bold 18px arial, sans-serif;
+    top: 200px;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -100px;
+	box-shadow: 1px 1px 2px black;
+    width: 250px;
+    height: 140px;
+	z-index: 150;
+}
+
+#tb {
+	width: 200px;
+}
+
+#Confirm, #Confirm2, #Confirm3 {
+	position: absolute;
+	background: #A2FFA2;
+	color: black;
+	font: bold 14px arial, sans-serif;
+	top: 65px;
+	left: 100px;
+	height: 30px;
+	width:  90px;
+}
+
+#Confirm2 {
+	top: 100px;
+	left: 190px;
+}
+
+#Confirm3 {
+	top: 100px;
+	left: 150px;
+}
+
+#Confirm:hover, #Confirm2:hover, #Confirm3:hover{
+	background: #00FF00;
+	box-shadow: 1px 1px 2px black;
+}
+
+
+#Cancel, #Cancel2, #Cancel3 {
+	position: absolute;
+	background: #FF8585;
+	color: black;
+	font: bold 14px arial, sans-serif;
+	top: 65px;
+	left: 10px;
+	height: 30px;
+	width: 90px;
+}
+
+#Cancel2, #Cancel3 {
+	top: 100px;
+	left: 20px;
+}
+
+#Cancel3 {
+	left: 10px;
+}
+
+#Cancel:hover, #Cancel2:hover, #Cancel3:hover{
+	background: #FF0000;
+	box-shadow: 1px 1px 2px black;
+}
+
+
+canvas {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background: #E5FFFF;
+	border: 2px;
+	border-radius: 8px;
+	box-shadow: 1px 1px 2px orange;
+}
+
+.eraserTip {
+	cursor: url('../img/eraser.png'), auto;
+}
+
+
+#layoutTiles{
+	display: none;
+}
+
+#tileMenu{
+	position: fixed;
+	top: 220px;
+	left: 1170px;
+	height: 200px;
+	width: 35px;
+}
+
+.draggableTile {
+	height: 30px;
+	width: 30px;
+	border: 1px solid black;
+	background: #EBC299;
+	cursor: pointer;
+}
+
+.draggableTile20 {
+	height: 20px;
+	width: 20px;
+	border: 1px solid black;
+	background: #EBC299;
+	cursor: pointer;
+}
+
+.draggableTile:hover{
+	outline-style: solid;
+	outline-color: black;
+    outline-width: 1px;
+}
+
+
+#resTog {
+	position: fixed;
+	border: 2px solid black;
+	border-radius: 8px;
+	box-shadow: 1px 2px 2px brown;
+	top: 340px;
+	left: 1170px;
+	height: 25px;
+	width: 150px;
+}
+
+#resTogLabel {
+	position: absolute;
+	background: #CB987E;
+	top: 0px;
+	left: 0px;
+	height: 25px;
+	width: 90px;
+	border-radius: 6px 0px 0px 6px;
+}
+
+#resTogBut {
+	position: absolute;
+	background: #FFE659;
+	top: 0px;
+	left: 90px;
+	height: 25px;
+	width: 59px;
+	border-left: 2px solid black;
+	border-radius: 0px 6px 6px 0px;
+	cursor: pointer;
+}
+
+#resTogBut:hover {
+	background: orange;
+}
+
+
+.text {
+	position: absolute;
+	font: bold 16px arial, sans-serif;
+	top: 2px;
+	left: 10px;
+	margin: auto;
+}
+
+.text2 {
+	position: absolute;
+	font: bold 12px arial, sans-serif;
+	top: 5px;
+	left: 5px;
+	margin: auto;
+}
+
+#text-pane { 
+	position: fixed;
+	top: 70px;
+	left: 105px;
+	width: 160px;
+	float: left; 
+	height: 255px; 
+	font-family: arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	background-color: tan; 
+	border: 3px ridge black; 
+	z-index: 100;
+}
+
+#text { 
+	position: absolute;
+	top: 30px;
+	left: 5px;
+	width: 150px;
+	height: 220px; 
+	overflow: auto; 
+	font-family: arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	color: tan;
+	background-color: black;  
+	z-index: 100;
+}
+
+
+
+
+
+#openPane {
+	position: fixed;
+	left: 1170px;
+	top: 380px;
+	height: 25px;
+	width: 25px;
+	background: url('../img/redPlus.png') no-repeat;
+	background-size: 100% 100%;
+	border: 2px solid black;
+	border-radius: 7px;
+	box-shadow: 1px 1px 2px brown;
+	cursor: pointer;
+}
+
+#openPane:hover {
+	background: url('../img/redPlusHov.png') no-repeat;
+	background-size: 100% 100%;
+}
+
+#openPaneLabel {
+	position: fixed;
+	font: bold 16px arial, sans-serif;
+	top: 385px;
+	left: 1205px;
+	margin: auto;
+}
+
+#closePane {
+	position: absolute;
+	top: 2px;
+	left: 130px;
+	height: 20px;
+	width: 20px;
+	background: url('../img/redEx.png') no-repeat;
+	background-size: 100% 100%;
+	border: 2px solid black;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#closePane:hover {
+	box-shadow: 1px 1px 0px;
+}
+
+#sizePane {
+	position: absolute;
+	top: 2px;
+	left: 102px;
+	height: 20px;
+	width: 20px;	
+	background: url('../img/blueRestore.png') no-repeat;
+	background-size: 100% 100%;
+	border: 2px solid black;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#sizePane:hover {
+	box-shadow: 1px 1px 0px;
+}
+
+.closed {
+		background: url('../img/greenPlus.png') no-repeat 100% 100%;
+}
+
+
+#resTogButton:hover{
+	border: 3px solid brown;
+}
+
+
+.hidden {
+	visibility: hidden;
+}
+
+#shiftButtons {
+	display: none;
+	z-index: 2;
+    /*opacity: 0.9;*/
+}
+
+#upShift {
+	position: absolute;
+	overflow: hidden;
+	height: 100px;
+	width: 500px;
+	left: 410px;
+	top: 30px;
+	background: url('../img/newArrowSheet.png') 0 0;
+	z-index: 2;
+    opacity: 0.2;
+}
+#upShift:hover{
+	background: url('../img/newArrowSheet.png') 0 -100px;
+    opacity: 0.4;
+}
+
+#downShift {
+	position: absolute;
+	overflow: hidden;
+	height: 100px;
+	width: 500px;
+	left: 410px;
+	top: 450px;
+	background: url('../img/newArrowSheet.png') 0px -200px;
+	z-index: 2;
+    opacity: 0.2;
+}
+
+#downShift:hover{
+	background: url('../img/newArrowSheet.png') 0px -300px;
+    opacity: 0.4;
+}
+
+#rightShift {
+	position: absolute;
+	overflow: hidden;
+	height: 500px;
+	width: 100px;
+	left: 1030px;
+	top: 40px;
+	background: url('../img/newArrowSheet.png') -700px 0px;
+	z-index: 2;
+    opacity: 0.2;
+}
+
+#rightShift:hover{
+	background: url('../img/newArrowSheet.png') -800px 0px;
+    opacity: 0.4;
+}
+
+#leftShift {
+	position: absolute;
+	overflow: hidden;
+	height: 500px;
+	width: 100px;
+	left: 190px;
+	top: 40px;
+	background: url('../img/newArrowSheet.png') -500px 0px;
+	z-index: 2;
+    opacity: 0.2;
+}
+#leftShift:hover{
+	background: url('../img/newArrowSheet.png') -600px 0px;
+    opacity: 0.4;
+}
+
+#banner {
+	position: fixed;
+	top: 10px;
+	left: 5px;
+	height: 600px;
+	width: 150px;
+	background: url('../img/banner2.png');
+	background-size: 100% 100%;
+}
+
+
+#canvasDIV, #buttonTray{
+	border: 5px solid #000;
+}
+
+#canvasDIV {
+	position: absolute;
+	top: 10px;
+	left: 170px;
+	height: 550px;
+	width: 970px;
+	border-radius: 15px 0px 15px 15px;
+	background: tan;
+	box-shadow: 2px 2px 3px black;
+}
+
+#buttonTray{
+	position: fixed;
+	background: tan;
+	border-left: none;
+	border-radius: 2px 10px 10px 2px;
+	box-shadow: 2px 2px 3px black;
+}
+
+.on {
+	background: url('../img/on2.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+.off {
+	background: url('../img/off2.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+.active {
+	background: url('../img/active2.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+.activeFull {
+	background: url('../img/activeFull.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+
+
+
+.bOn {
+	background: url('../img/groupOn.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+.bOff {
+	background: url('../img/groupOff.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+.bActive {
+	background: url('../img/groupActive.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+.bActiveFull {
+	background: url('../img/groupOnActive.png');
+	height: 25px;
+	width: 25px;
+	background-size: 100% 100%;
+}
+
+
+.frameSel, .bankSel {
+	cursor: pointer;
+}
+
+.frameSel:hover {
+	border: 2px solid red;
+	border-radius: 15px;
+}
+
+.bankSel:hover {
+	border: 2px solid blue;
+	border-radius: 15px;
+}
+
+.disabledElement{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+

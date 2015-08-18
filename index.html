@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+	<html lang="en">
+	<title>Knotswithstanding!</title>
+	<link rel="stylesheet" href="css/styleSheet.css"><!--css/-->
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="js/AnalysisAndSuperClasses.js"></script>
+	<script type="text/javascript" src="js/jcanvas.js"></script>
+	<script type="text/javascript" src="js/EventHandling.js"></script>
+	<script type="text/javascript" src="js/RegisterSet.js"></script>
+	<script type="text/javascript" src="js/DisplayPane.js"></script>
+	<!--<h1>Knotswithstanding!</h1>
+	<!--<h3>Mathematical Knot Tabulator</h3>-->
+</head>
+ 
+<body id="bckgrnd" height="600">
+
+	<!--Shift arrows-->
+	<div id="shiftButtons">
+		<img id="upShift" src="img/trans.png"></img>
+		<img id="downShift" src="img/trans.png"></img>
+		<img id="rightShift" src="img/trans.png"></img>
+		<img id="leftShift" src="img/trans.png"></img>
+	</div>
+
+	<!--Tile menu-->
+	<div id="tileMenu">
+		<img class="draggableTile" id="tileLineVert" border="1" src="img/tileLineVert.png" style="top: 10px; left: 5px;"></img>
+		<img class="draggableTile" id="tileCornerTopRight" border="1" src="img/tileCornerTopRight.png" style="top: 55px; left: 5px;"></img>
+		<img class="draggableTile" id="tileCrossOver" border="1" src="img/tileCrossOver.png" style="top: 100px; left: 5px;"></img>
+	</div>
+	
+	<div id="text-pane">
+		<div id="closePane" class='opened' title='Hide'></div>
+		<div id="sizePane" title = 'Resize'></div>
+		<div id="text"></div>
+	</div>
+	
+	<div id="resTog">
+		<div id="resTogLabel">
+			<p class="text">Cell Size:</p>
+		</div>
+		<div id="resTogBut">
+			<p id="txt"  class="text" >30px</p>
+		</div>
+	</div>
+	
+	
+	<div id='openPane'></div>
+	<p id="openPaneLabel">Open text pane</p>
+	
+	<div id="layoutTiles">
+		<img id="tileCornerBotRight" src="img/tileCornerBotRight.png"></img>
+		<img id="tileCornerBotLeft" src="img/tileCornerBotLeft.png"></img>
+		<img id="tileCornerTopLeft" src="img/tileCornerTopLeft.png"></img>
+		<img id="tileLineHoz" src="img/tileLineHoz.png"></img>
+		<img id="tileCrossUnder" src="img/tileCrossUnder.png"></img>
+		
+		<img id="tileCornerTopRightRed" src="img/tileCornerTopRightRed.png"></img>
+		<img id="tileCornerBotRightRed" src="img/tileCornerBotRightRed.png"></img>
+		<img id="tileCornerBotLeftRed" src="img/tileCornerBotLeftRed.png"></img>
+		<img id="tileCornerTopLeftRed" src="img/tileCornerTopLeftRed.png"></img>
+		<img id="tileLineHozRed" src="img/tileLineHozRed.png"></img>
+		<img id="tileLineVertRed" src="img/tileLineVertRed.png"></img>
+		<img id="tileCrossOverRed" src="img/tileCrossOverRed.png"></img>
+		<img id="tileCrossUnderRed" src="img/tileCrossUnderRed.png"></img>
+		
+		<img id="tileCornerTopRightGreen" src="img/tileCornerTopRightGreen.png"></img>
+		<img id="tileCornerBotRightGreen" src="img/tileCornerBotRightGreen.png"></img>
+		<img id="tileCornerBotLeftGreen" src="img/tileCornerBotLeftGreen.png"></img>
+		<img id="tileCornerTopLeftGreen" src="img/tileCornerTopLeftGreen.png"></img>
+		<img id="tileLineHozGreen" src="img/tileLineHozGreen.png"></img>
+		<img id="tileLineVertGreen" src="img/tileLineVertGreen.png"></img>
+		<img id="tileCrossOverGreen" src="img/tileCrossOverGreen.png"></img>
+		<img id="tileCrossUnderGreen" src="img/tileCrossUnderGreen.png"></img>
+		
+		<img id="tileCornerTopRightBlue" src="img/tileCornerTopRightBlue.png"></img>
+		<img id="tileCornerBotRightBlue" src="img/tileCornerBotRightBlue.png"></img>
+		<img id="tileCornerBotLeftBlue" src="img/tileCornerBotLeftBlue.png"></img>
+		<img id="tileCornerTopLeftBlue" src="img/tileCornerTopLeftBlue.png"></img>
+		<img id="tileLineHozBlue" src="img/tileLineHozBlue.png"></img>
+		<img id="tileLineVertBlue" src="img/tileLineVertBlue.png"></img>
+		<img id="tileCrossOverBlue" src="img/tileCrossOverBlue.png"></img>
+		<img id="tileCrossUnderBlue" src="img/tileCrossUnderBlue.png"></img>
+	</div>
+	
+		<div id="canvasDIV">
+			<canvas id="canvas" height="540" width="960">Your current browser does not support Canvas! Use Firefox or Google Chrome.</canvas>
+		</div>
+		
+		<div id='buttonTray'>
+			<input type='button' class='iconBut' id='clearBut' title='Clear Grid'>
+			<input type='button' class='iconBut' id='invBut' title='Invert Crossings'>
+			<input type='button' class='iconBut' id='eraseBut' title='Erase Selected'>
+			<input type='button' class='iconBut' id='rotateBut' title='Rotate Selected'>
+			<input type='button' class='iconBut' id='shiftBut' title='Shift'>
+			<input type='button' class='iconBut' id='saveBut' title='Save'>
+			<input type='button' class='iconBut' id='loadBut' title='Load'>
+			<input type='button' class='iconBut' id='colorBut' title='Tricolor'>
+		</div>
+		
+		<div id='sequencingPanel'>
+			<p id = 'bankLbl'>Bank:</p>
+			<div id = 'bankButtons'></div>
+			
+			<div id = 'frameButtons'></div>
+			<div id = 'playPauseButs'>
+				<div id = 'playBut' class = 'seqContButs'></div>
+				<div id = 'rvsPlayBut' class = 'seqContButs'></div>
+				<div id = 'stopBut' class = 'seqContButs'></div>
+				<div id = 'prevBut' class = 'seqContButs'></div>
+				<div id = 'nextBut' class = 'seqContButs'></div>
+			</div>
+			<div id = 'frBox'>
+					<p id = 'txtLbl'>Frame rate:</p>
+					<input type="range" id = 'slider' min="1" max="100" value="25"></input>	
+			</div>
+			<label id = 'localBoxLbl'><input type="checkbox" id = 'localBox' name="local" checked>&nbsp Loop local bank only</label>
+			<div id="compBut">
+				<div id="compLabel">
+					<p class="text2">Compare Registers</p>
+				</div>
+				<div id="dCompare">
+					<p id="txt2"  class="text2" >OFF</p>
+				</div>
+			</div>
+
+		</div>
+		
+	<input type='file'  id='fileOpen' name='file'/>
+	
+	<div id='banner'></div>
+	
+	<div id="modalMsg" class='boxStyle'>
+		<p id = "mmtext"></p>
+		 <input type='button' id='Confirm' class='boxStyle' value='OK'></input>
+		 <input type='button' id='Cancel' class='boxStyle' value='Cancel'></input>
+	</div>
+	
+	<!--<div id="modalMsg2" class='boxStyle'>
+		<p>Changing resolution will erase</p>
+		<p>all unsaved data. Proceed?</p>
+		 <input type='button' id='Confirm2' class='boxStyle' value='OK'></input>
+		 <input type='button' id='Cancel2' class='boxStyle' value='Cancel'></input>
+	</div>-->
+	
+	<div id="modalMsg3" class='boxStyle'>
+		<p>Enter filename:</p>
+		<input id='tb' type='text' name='str'></input>
+		 <input type='button' id='Confirm3' class='boxStyle' value='Save'></input>
+		 <input type='button' id='Cancel3' class='boxStyle' value='Cancel'></input>
+	</div>
+
+	<script type="text/javascript" src="js/Board.js"></script>
+ 
+</body>
+</html>
+ 
